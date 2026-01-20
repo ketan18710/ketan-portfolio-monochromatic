@@ -9,7 +9,7 @@ const projects = [
     id: 1,
     title: "Jove",
     description:
-      "Legacy architecture struggled with high-concurrency video streaming. Engineered a Dockerized microservices backend (FastAPI/Django) and migrated frontend to Next.js, reducing latency by 40% and optimizing Core Web Vitals for massive video-rich pages.",
+      "Led the frontend migration to Next.js and engineered a custom IP-based authentication system to enable seamless institutional access (e.g., Harvard, Stanford). Optimized backend microservices to ensure secure, high-performance data delivery for academic clients.",
     tech: ["Next.js", "Python", "FastAPI", "Redis", "Docker"],
     image: "/images/projects/jove.png",
   },
@@ -58,7 +58,7 @@ export default function SelectedWork() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          Selected Work
+          Featured
         </motion.h2>
 
         {/* Horizontal scrolling track */}
