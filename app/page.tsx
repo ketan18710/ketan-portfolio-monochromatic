@@ -3,6 +3,9 @@ import Hero from "@/components/sections/Hero"
 import Services from "@/components/sections/Services"
 
 // Lazy load sections below the fold
+const Education = dynamic(() => import("@/components/sections/Education"), {
+  ssr: true,
+})
 const SelectedWork = dynamic(() => import("@/components/sections/SelectedWork"), {
   ssr: true,
 })
@@ -24,6 +27,7 @@ export default function Home() {
     <main className="min-h-screen">
       <Hero />
       <Services />
+      <Education />
       <SelectedWork />
       <LLMCredibility />
       <Companies />
