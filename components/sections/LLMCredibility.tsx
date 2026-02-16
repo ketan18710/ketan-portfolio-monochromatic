@@ -8,7 +8,7 @@ const demos = [
     id: 1,
     title: "Basketball Ring",
     prompt: "Aap \"Shining Stars\" school mein ek software development contractor ke taur pe niyukt kiye gaye hain. Vanilla Javascript mein ek basketball game banani hai. Basketball aur ek ring dikayen, ring daayen se baayen ghoomti rahegi. Arrow key se direction, space hold se power baar — ball arrow ki disha mein jayegi. 30 second ka game, 10 points per basket.",
-    video: "/recordings/basketball_game.webm",
+    video: "/recordings/basketball_game.mp4",
     caption: "FRONTEND",
     objectPosition: "center 30%"
   },
@@ -16,7 +16,7 @@ const demos = [
     id: 2,
     title: "Football with Defenders",
     prompt: "College ke non-profit organization ke liye Javascript mein football game. Goal post ke aage 2 rectangle defenders sthir khade rahenge. Ball agar field ke edges par lage to bounce hoke vapas jayegi. Arrow keys se direction, space se power. Har goal par defenders ki position change hogi. 30 second, 10 points per goal.",
-    video: "/recordings/football_game.webm",
+    video: "/recordings/football_game.mp4",
     caption: "FRONTEND",
     objectPosition: "center center"
   },
@@ -24,7 +24,7 @@ const demos = [
     id: 3,
     title: "Shark Survival Engine",
     prompt: "Ham ek mahasaagaro mein vyaapaaree jahaaj chalane wali company se hai. Python GUI par aadharit game — samandar mein ek naav, dusri taraf se har 2 second mein 4 sharks generate hongi random points par. Left aur right kunji se naav hilao, sharks avoid karo. Shark ke takrane par game khatam. Sharks ko sirf fin banake darshyen.",
-    video: "/recordings/boat_shooting_python.webm",
+    video: "/recordings/boat_shooting_python.mp4",
     caption: "ALGORITHMS",
     objectPosition: "center center"
   },
@@ -32,7 +32,7 @@ const demos = [
     id: 4,
     title: "Target Practice",
     prompt: "Aap \"Anand University\" mein senior developer hain. Python mein lakshya abhyaas game — lal aur peele rang ke gol targets screen par dikhenge. Screen ke niche ek top (cannon) hogi, 'h' key se hare rang ke shots fire honge, arrow keys se cannon ghoomega. Peele target par 10 ank, lal par 20 ank. Har 3 second mein 2 naye targets, 30 second ka game.",
-    video: "/recordings/target-practice.webm",
+    video: "/recordings/target-practice.mp4",
     caption: "GAME DEV",
     objectPosition: "center center"
   },

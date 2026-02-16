@@ -72,7 +72,7 @@ export default function Hero() {
 
         {/* PHASE 1: Name + Subtitle - positioned at TOP */}
         <motion.div
-          className="absolute top-[8%] left-0 right-0 text-center px-2 sm:px-4 md:px-6 lg:px-8 z-20"
+          className="absolute top-4 md:top-[8%] left-0 right-0 text-center px-2 sm:px-4 md:px-6 lg:px-8 z-20"
           initial={shouldReduceMotion ? "visible" : "hidden"}
           animate="visible"
           variants={heroStaggerContainer}
