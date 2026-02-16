@@ -5,6 +5,9 @@
 /.pnp
 .pnp.js
 
+# cursor indexing
+.cursorindexingignore
+
 # testing
 /coverage
 

@@ -45,6 +45,12 @@ const VideoModal = ({ demo, onClose }: { demo: typeof demos[0] | null, onClose: 
 
   useEffect(() => {
     if (demo) {
+      // Force muted for iOS autoplay policy
+      if (videoRef.current) {
+        videoRef.current.defaultMuted = true
+        videoRef.current.muted = true
+      }
+
       document.body.style.overflow = "hidden"
       const handleEsc = (e: KeyboardEvent) => {
         if (e.key === "Escape") onClose()
@@ -108,13 +114,16 @@ const VideoModal = ({ demo, onClose }: { demo: typeof demos[0] | null, onClose: 
         <div className="relative flex-1 bg-black/60 rounded-sm overflow-hidden">
           <video
             ref={videoRef}
-            src={demo.video}
             autoPlay
             loop
+            muted
             playsInline
+            preload="auto"
             onTimeUpdate={handleTimeUpdate}
             className="absolute inset-0 w-full h-full object-contain"
-          />
+          >
+            <source src={demo.video} type="video/mp4" />
+          </video>
           {/* Progress bar */}
           <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-white/10">
             <div className="h-full bg-white/60 transition-all duration-100" style={{ width: `${progress}%` }} />
@@ -139,6 +148,14 @@ const DesktopVideoCard = ({ demo, isActive, onExpand }: { demo: typeof demos[0],
   const [progress, setProgress] = useState(0)
 
   useEffect(() => {
+    // Force muted for iOS autoplay policy
+    if (videoRef.current) {
+      videoRef.current.defaultMuted = true
+      videoRef.current.muted = true
+    }
+  }, [])
+
+  useEffect(() => {
     if (isActive && videoRef.current) {
       videoRef.current.play().catch(() => { })
     } else if (!isActive && videoRef.current) {
@@ -159,15 +176,17 @@ const DesktopVideoCard = ({ demo, isActive, onExpand }: { demo: typeof demos[0],
     >
       <video
         ref={videoRef}
-        src={demo.video}
         autoPlay
         loop
         muted
         playsInline
+        preload="auto"
         onTimeUpdate={handleTimeUpdate}
         className="absolute inset-0 w-full h-full object-cover opacity-80"
         style={{ objectPosition: demo.objectPosition }}
-      />
+      >
+        <source src={demo.video} type="video/mp4" />
+      </video>
       <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
 
       {/* Expand hint */}
@@ -218,6 +237,14 @@ const MobileVideoCard = ({ demo, index, onExpand }: { demo: typeof demos[0], ind
   const [isInView, setIsInView] = useState(false)
 
   useEffect(() => {
+    // Force muted for iOS autoplay policy
+    if (videoRef.current) {
+      videoRef.current.defaultMuted = true
+      videoRef.current.muted = true
+    }
+  }, [])
+
+  useEffect(() => {
     if (isInView && videoRef.current) {
       videoRef.current.play().catch(() => { })
     } else if (!isInView && videoRef.current) {
@@ -248,14 +275,17 @@ const MobileVideoCard = ({ demo, index, onExpand }: { demo: typeof demos[0], ind
       >
         <video
           ref={videoRef}
-          src={demo.video}
+          autoPlay
           loop
           muted
           playsInline
+          preload="auto"
           onTimeUpdate={handleTimeUpdate}
           className="absolute inset-0 w-full h-full object-cover"
           style={{ objectPosition: demo.objectPosition }}
-        />
+        >
+          <source src={demo.video} type="video/mp4" />
+        </video>
         <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
 
         <div className="absolute top-4 left-4">
