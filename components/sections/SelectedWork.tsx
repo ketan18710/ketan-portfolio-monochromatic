@@ -84,7 +84,7 @@ const DesktopSelectedWork = () => {
     <section ref={targetRef} className="relative h-[400vh] bg-background">
       <div className="sticky top-0 h-screen flex flex-col justify-start overflow-hidden">
         <motion.h2
-          className="font-tinos text-8xl lg:text-9xl font-bold text-white px-8 pt-12 mb-16"
+          className="font-tinos text-8xl lg:text-9xl font-bold text-white px-8 pt-12 md:pt-24 mb-16 md:mb-24"
           initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
@@ -143,7 +143,7 @@ const DesktopSelectedWork = () => {
 // Mobile Vertical Stack Component
 const MobileSelectedWork = () => {
   return (
-    <section className="bg-background px-4 py-16">
+    <section className="bg-background px-4 py-12 md:py-24">
       <motion.h2
         className="font-tinos text-5xl font-bold text-white mb-12"
         initial={{ opacity: 0 }}

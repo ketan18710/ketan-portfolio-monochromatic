@@ -15,9 +15,9 @@ const LLMCredibility = dynamic(() => import("@/components/sections/LLMCredibilit
 const Companies = dynamic(() => import("@/components/sections/Companies"), {
   ssr: true,
 })
-const Experience = dynamic(() => import("@/components/sections/Experience"), {
-  ssr: true,
-})
+// const Experience = dynamic(() => import("@/components/sections/Experience"), {
+//   ssr: true,
+// })
 const Contact = dynamic(() => import("@/components/sections/Contact"), {
   ssr: true,
 })
@@ -31,7 +31,7 @@ export default function Home() {
       <SelectedWork />
       <LLMCredibility />
       <Companies />
-      <Experience />
+      {/* <Experience /> */}
       <Contact />
     </main>
   )
