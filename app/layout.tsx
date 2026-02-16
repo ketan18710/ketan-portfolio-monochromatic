@@ -48,6 +48,10 @@ export const metadata: Metadata = {
     title: "Ketan Verma - Senior Full-Stack Developer",
     description: "Senior Full-Stack Developer with 5+ years building scalable, production-grade systems for real businesses.",
   },
+  icons: {
+    icon: "/icon.png",
+    apple: "/icon.png",
+  },
 }
 
 export default function RootLayout({
