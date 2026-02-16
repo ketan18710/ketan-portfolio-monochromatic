@@ -30,7 +30,7 @@ export default function Hero() {
   const [startTyping, setStartTyping] = useState(false)
 
   useEffect(() => {
-    const threshold = isMobile ? 0.35 : 0.45
+    const threshold = isMobile ? 0.20 : 0.45
     return scrollYProgress.on("change", (latest) => {
       if (latest > threshold && !startTyping) {
         setStartTyping(true)
@@ -59,7 +59,7 @@ export default function Hero() {
   // ============================================
   const taglineOpacity = useTransform(
     scrollYProgress,
-    isMobile ? [0.30, 0.40, 0.85, 0.95] : [0.45, 0.55, 0.85, 0.95],
+    isMobile ? [0.15, 0.25, 0.85, 0.95] : [0.45, 0.55, 0.85, 0.95],
     [0, 1, 1, 0]
   )
 
@@ -149,7 +149,7 @@ export default function Hero() {
                 { text: "Systems that Scale.", className: "text-6xl sm:text-7xl md:text-7xl lg:text-8xl font-black font-display text-white tracking-tight", display: "block" }
               ]}
               className="max-w-6xl mx-auto pt-24 sm:pt-32 md:pt-40 lg:pt-64"
-              speed={50}
+              speed={isMobile ? 30 : 50}
               start={startTyping}
               delay={200}
             />
