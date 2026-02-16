@@ -12,6 +12,7 @@ const projects = [
       "Led the frontend migration to Next.js and engineered a custom IP-based authentication system to enable seamless institutional access (e.g., Harvard, Stanford). Optimized backend microservices to ensure secure, high-performance data delivery for academic clients.",
     tech: ["Next.js", "Python", "FastAPI", "Redis", "Docker"],
     image: "/images/projects/jove.png",
+    alt: "Jove academic video platform - Next.js migration and IP-based authentication project by Ketan Verma",
   },
   {
     id: 2,
@@ -20,6 +21,7 @@ const projects = [
       "Engineered the core Email & Form Builders and a lightweight JS/CSS library, enabling users to embed fully functional, custom-styled forms into any external application with just two lines of code.",
     tech: ["React", "Redux", "Node.js", "MongoDB"],
     image: "/images/projects/grorapid.png",
+    alt: "Grorapid CRM email and form builder project by Ketan Verma",
   },
   {
     id: 3,
@@ -28,6 +30,7 @@ const projects = [
       "Manual campaign creation was error-prone across 15+ industries. Developed an automated audience management system and optimized backend queries, implementing Redis caching to cut database load by 40% and speed up search by 30%.",
     tech: ["Node.js", "Redis", "PostgreSQL", "React"],
     image: "/images/projects/rolson.png?v=2",
+    alt: "Rolson Tools automated campaign management system by Ketan Verma",
   },
 ]
 
@@ -43,7 +46,7 @@ const MobileProjectCard = ({ project, index }: { project: typeof projects[0], in
     <div className="relative w-full aspect-[16/10] overflow-hidden rounded-sm mb-6">
       <Image
         src={project.image}
-        alt={project.title}
+        alt={project.alt}
         fill
         className="object-cover transition-transform duration-700 group-hover:scale-105"
       />
@@ -81,7 +84,7 @@ const DesktopSelectedWork = () => {
   const x = useTransform(scrollYProgress, [0, 1], ["0%", "-200%"])
 
   return (
-    <section ref={targetRef} className="relative h-[400vh] bg-background">
+    <section ref={targetRef} id="work" aria-label="Featured Work" className="relative h-[400vh] bg-background">
       <div className="sticky top-0 h-screen flex flex-col justify-start overflow-hidden">
         <motion.h2
           className="font-tinos text-8xl lg:text-9xl font-bold text-white px-8 pt-12 md:pt-24 mb-16 md:mb-24"
@@ -106,7 +109,7 @@ const DesktopSelectedWork = () => {
               <div className="w-[55%] h-full bg-neutral-900 relative overflow-hidden rounded-sm">
                 <Image
                   src={project.image}
-                  alt={project.title}
+                  alt={project.alt}
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
                 />
@@ -143,7 +146,7 @@ const DesktopSelectedWork = () => {
 // Mobile Vertical Stack Component
 const MobileSelectedWork = () => {
   return (
-    <section className="bg-background px-4 py-12 md:py-24">
+    <section id="work" aria-label="Featured Work" className="bg-background px-4 py-12 md:py-24">
       <motion.h2
         className="font-tinos text-5xl font-bold text-white mb-12"
         initial={{ opacity: 0 }}

@@ -20,7 +20,7 @@ export default function Companies() {
     const shouldReduceMotion = useReducedMotion()
 
     return (
-        <section className="py-12 md:py-24 px-4 md:px-8 bg-background">
+        <section id="companies" aria-label="Companies Worked With" className="py-12 md:py-24 px-4 md:px-8 bg-background">
             <div className="max-w-7xl mx-auto">
                 <motion.h2
                     className="font-tinos text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-16 md:mb-24 uppercase tracking-tight"
@@ -43,7 +43,7 @@ export default function Companies() {
                                 <div className="relative w-full h-12 md:h-14">
                                     <Image
                                         src={company.logo}
-                                        alt={company.name}
+                                        alt={`${company.name} logo`}
                                         fill
                                         className="object-contain"
                                     />

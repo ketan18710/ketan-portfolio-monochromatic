@@ -17,7 +17,7 @@ export default function Contact() {
   }
 
   return (
-    <section className="py-12 md:py-24 px-4 md:px-8 bg-background">
+    <footer id="contact" aria-label="Contact" className="py-12 md:py-24 px-4 md:px-8 bg-background">
       <div className="max-w-7xl mx-auto">
         <motion.div
           className="flex flex-col gap-12 md:gap-16"
@@ -53,6 +53,7 @@ export default function Contact() {
           >
             <a
               href="mailto:ketan18710@gmail.com"
+              aria-label="Send email to Ketan Verma"
               className="group relative w-full flex items-center justify-center gap-4 px-12 py-7 md:py-8 bg-white text-black font-mono text-lg md:text-xl tracking-wider uppercase rounded-sm overflow-hidden transition-all duration-300 hover:shadow-[0_0_40px_rgba(255,255,255,0.15)]"
             >
               {/* Shimmer effect on hover */}
@@ -62,11 +63,11 @@ export default function Contact() {
               <div className="hidden md:block absolute left-8 top-1/2 -translate-y-1/2 w-12 h-[1px] bg-black/20 group-hover:w-16 transition-all duration-300" />
 
               {/* Content */}
-              <svg className="w-6 h-6 relative z-10" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <svg className="w-6 h-6 relative z-10" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
               </svg>
               <span className="relative z-10">Email Me</span>
-              <svg className="w-5 h-5 relative z-10 group-hover:translate-x-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <svg className="w-5 h-5 relative z-10 group-hover:translate-x-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
               </svg>
 
@@ -91,6 +92,6 @@ export default function Contact() {
           </motion.div>
         </motion.div>
       </div>
-    </section>
+    </footer>
   )
 }

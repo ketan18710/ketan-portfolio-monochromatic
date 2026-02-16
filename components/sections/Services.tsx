@@ -30,7 +30,7 @@ export default function Services() {
   const shouldReduceMotion = useReducedMotion()
 
   return (
-    <section className="py-6 md:py-12 px-4 md:px-8 bg-background">
+    <section id="capabilities" aria-label="Capabilities" className="py-6 md:py-12 px-4 md:px-8 bg-background">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <motion.h2

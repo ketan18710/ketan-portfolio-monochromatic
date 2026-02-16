@@ -66,6 +66,8 @@ export default function Hero() {
   return (
     <section
       ref={heroRef}
+      id="hero"
+      aria-label="Hero"
       className="min-h-[85vh] md:min-h-[150vh] flex items-start justify-center relative"
     >
       <div className="w-full sticky top-0 min-h-screen overflow-hidden">
@@ -124,7 +126,7 @@ export default function Hero() {
             >
               <Image
                 src="/portrait-fur.jpg"
-                alt="Portrait"
+                alt="Ketan Verma - Senior Full-Stack Developer"
                 fill
                 className="object-cover"
                 priority

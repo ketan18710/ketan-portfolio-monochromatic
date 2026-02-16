@@ -24,16 +24,24 @@ const Contact = dynamic(() => import("@/components/sections/Contact"), {
 
 export default function Home() {
   return (
-    <main className="min-h-screen">
-      <Hero />
-      <Services />
-      <Education />
-      <SelectedWork />
-      <LLMCredibility />
-      <Companies />
-      {/* <Experience /> */}
-      <Contact />
-    </main>
+    <>
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:bg-white focus:text-black focus:px-4 focus:py-2 focus:rounded-sm focus:font-mono focus:text-sm"
+      >
+        Skip to content
+      </a>
+      <main id="main-content" className="min-h-screen">
+        <Hero />
+        <Services />
+        <Education />
+        <SelectedWork />
+        <LLMCredibility />
+        <Companies />
+        {/* <Experience /> */}
+        <Contact />
+      </main>
+    </>
   )
 }
 

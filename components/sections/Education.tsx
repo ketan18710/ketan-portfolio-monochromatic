@@ -40,7 +40,7 @@ export default function Education() {
     const shouldReduceMotion = useReducedMotion()
 
     return (
-        <section className="py-12 md:py-24 px-4 md:px-8 bg-background overflow-hidden">
+        <section id="education" aria-label="Education" className="py-12 md:py-24 px-4 md:px-8 bg-background overflow-hidden">
             <div className="max-w-7xl mx-auto">
                 {/* Section Header */}
                 <motion.h2

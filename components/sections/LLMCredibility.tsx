@@ -350,7 +350,7 @@ const DesktopLLMCredibility = () => {
   const closeModal = useCallback(() => setModalDemo(null), [])
 
   return (
-    <section className="relative bg-background">
+    <section id="ai-training" aria-label="AI Training Work" className="relative bg-background">
       {/* Header - scrolls away naturally */}
       <motion.div
         className="px-8 pt-12 md:pt-24 pb-16 md:pb-24"
@@ -406,7 +406,7 @@ const MobileLLMCredibility = () => {
   const closeModal = useCallback(() => setModalDemo(null), [])
 
   return (
-    <section className="bg-background px-4 py-12 md:py-24">
+    <section id="ai-training" aria-label="AI Training Work" className="bg-background px-4 py-12 md:py-24">
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
